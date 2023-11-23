@@ -29,14 +29,14 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                     height: MediaQuery.of(context).size.height * .5,
                     width: MediaQuery.of(context).size.width * .9,
                     padding: const EdgeInsets.symmetric(horizontal: 50),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black,
                           blurRadius: 100,
                           spreadRadius: 100,
-                          offset: Offset(0, -5),
+                          offset: Offset(0, -10),
                         ),
                       ],
                     ),
@@ -44,9 +44,11 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(CupertinoIcons.rectangle_grid_2x2_fill, size: MediaQuery.of(context).size.height * .4),
+                        Icon(CupertinoIcons.rectangle_grid_2x2_fill,
+                            size: MediaQuery.of(context).size.height * .4, color: Colors.grey),
                         const Spacer(),
-                        Icon(CupertinoIcons.settings, size: MediaQuery.of(context).size.height * .4),
+                        Icon(CupertinoIcons.settings,
+                            size: MediaQuery.of(context).size.height * .4, color: Colors.grey),
                       ],
                     ),
                   ),
@@ -58,7 +60,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                     height: (((MediaQuery.of(context).size.height * .5) / 22) * 14) * 2,
                     width: ((MediaQuery.of(context).size.width * .9) / 68) * 16,
                     decoration: BoxDecoration(
-                      color: Color(0xFFFE7D55),
+                      color: const Color(0xFFFE7D55),
                       border: Border.all(color: Colors.deepOrange.shade100, width: 15),
                       shape: BoxShape.circle,
                     ),
